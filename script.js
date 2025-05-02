@@ -155,10 +155,11 @@ projectCards.forEach(card => {
 });
 
 // Navbar scroll effect
-const navbar = document.querySelector('.navbar');
+const navbar = document.querySelector('.main-nav');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
+    if (!navbar) return;
     const currentScroll = window.pageYOffset;
     
     if (currentScroll <= 0) {
