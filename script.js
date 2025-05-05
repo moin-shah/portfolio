@@ -134,12 +134,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.2 });
     
     // Add fade-in animation to sections and cards
-    document.querySelectorAll('.section, .timeline-content, .skill-category, .education-card, .stat-item').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'all 0.5s ease';
-        fadeInObserver.observe(el);
-    });
+     if (window.innerWidth >= 769) {
+        document.querySelectorAll('.section, .timeline-content, .skill-category, .education-card, .stat-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.5s ease';
+            fadeInObserver.observe(el);
+        });
+    }
 });
 
 // Hover effects for project cards

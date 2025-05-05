@@ -1727,7 +1727,7 @@ html, body {
     .main-nav {
         width: 100%;
         max-width: 100%;
-        position: relative;
+        position: fixed;
         left: 0;
         right: 0;
         padding: 0.5rem;
@@ -1754,6 +1754,9 @@ html, body {
     .nav-links::-webkit-scrollbar {
         display: none;
     }
+     .nav-social {
+        display: none !important;
+    }
 
     .main-content {
         width: 100%;
@@ -1762,6 +1765,7 @@ html, body {
         padding: 0;
         margin: 0;
         position: relative;
+        margin-top: 150px;
     }
 
     .section {
